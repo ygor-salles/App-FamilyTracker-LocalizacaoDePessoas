@@ -1,0 +1,35 @@
+#############################################################################
+################################ CRUD FAMILY ################################
+
+### Busca uma família
+
+GET  http://localhost:3000/api/family/5f9e1d2808c8e50f444468f4 HTTP/1.1
+
+### Registra uma família
+
+POST  http://localhost:3000/api/family HTTP/1.1
+Content-Type: application/json
+
+{
+    "surname": "Doe"
+}
+
+### Atualiza a família
+
+PUT  http://localhost:3000/api/family/5f9a007bf864041e8ef85c2d HTTP/1.1
+Content-Type: application/json
+
+{
+    "surname": "DoeDoe"
+}
+
+### Remove a família
+
+DELETE http://localhost:3000/api/family/5f9a007bf864041e8ef85c2d HTTP/1.1
+
+
+############################# OTHER OPERATIONS ###############################
+
+### Busca a posição de todos os membros da família pelo id de um perfil
+
+GET http://localhost:3000/api/family/positions/5f9e0ba07df17b11f075343c HTTP/1.1

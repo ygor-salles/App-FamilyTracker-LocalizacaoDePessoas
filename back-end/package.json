@@ -1,0 +1,43 @@
+{
+  "name": "familytrackerbackend",
+  "version": "1.0.0",
+  "description": "RestAPI with Express.js and Node.js",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev-server": "nodemon server.js",
+    "eslint": "eslint"
+  },
+  "engines": {
+    "node": "12.19.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IsraelFM/familyTrackerBackend.git"
+  },
+  "keywords": [
+    "Express",
+    "API",
+    "MongoDb",
+    "Mongoose",
+    "Node",
+    "Tracker"
+  ],
+  "author": "IsraelFM",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/IsraelFM/familyTrackerBackend/issues"
+  },
+  "homepage": "https://github.com/IsraelFM/familyTrackerBackend#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.9"
+  },
+  "devDependencies": {
+    "eslint": "^7.11.0",
+    "nodemon": "^2.0.5"
+  }
+}

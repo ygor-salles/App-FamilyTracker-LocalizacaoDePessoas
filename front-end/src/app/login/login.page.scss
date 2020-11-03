@@ -1,0 +1,109 @@
+@import "../../theme/Mixins.scss";
+
+.main-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.background {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+
+    @include tablet-landscape-and-up {
+        padding-bottom: 10%;
+        background-size: 200% 200%;
+    }
+}
+
+.item-input {
+    border-bottom-color: transparent !important;
+}
+
+.item-input::before {
+    border-bottom-color: transparent !important;
+}
+
+.item-input::after {
+    border-bottom-color: transparent !important;
+}
+
+.logo {
+    margin: 0 0 20px 0;
+    font-size: 170px;
+}
+
+ion-label {
+    opacity: 0.7;
+}
+
+ion-input {
+    background-color: transparent;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+ion-item {
+    width: 300px;
+    border: 3px solid rgba(255, 255, 255, 1);
+    --highlight-color-focused: none;
+    margin: 20px 0 15px 0;
+    border-radius: 15px;
+    background-color: white;
+    --border-color: transparent;
+    margin-bottom: 8px;
+}
+
+.label-md + ion-input .text-input,
+.label-md + ion-textarea .text-input,
+.label-ios + .input {
+    border: none !important;
+}
+
+ion-item {
+    --border-color: transparent !important;
+}
+
+:host {
+    .item-interactive.ion-invalid{
+     --highlight-background: transparent !important;
+     --border-color: transparent !important;
+   }
+   .item-interactive.ion-valid{
+     --highlight-background: transparent !important;
+     --border-color: transparent !important;
+   }
+ }
+
+.button {
+    width: 300px;
+    height: 60px;
+    margin-top: 25px;
+    font-size: 1.1em;
+    --border-radius: 15px;
+}

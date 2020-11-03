@@ -1,0 +1,46 @@
+<ion-content>
+  <ion-fab horizontal="start" vertical="top" slot="fixed">
+    <ion-fab-button color="danger">
+      <ion-icon name="menu"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="end">
+      <ion-fab-button color="light">
+        <ion-icon style="font-size: 2em; opacity: 0.7;" name="people-circle-outline" (click)="navigateToProfilePage()">
+        </ion-icon>
+      </ion-fab-button>
+      <!-- <ion-fab-button color="light">
+        <ion-icon style="font-size: 2em; opacity: 0.7;" name="settings-outline"></ion-icon>
+      </ion-fab-button> -->
+      <ion-fab-button color="light">
+        <ion-icon style="font-size: 2em;" color="primary" name="arrow-back-circle-outline"
+          (click)="navigateToLoginPage()"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+  <agm-map class="main-map" (mapReady)="mapReading()" [latitude]="myCenterLatitude" [longitude]="myCenterLongitude" [zoom]="myZoom"
+    disableDefaultUI="false" zoomControl="false">
+    <!-- <agm-overlay [latitude]="myLatitude" [longitude]="myLongitude">
+      <div class="marker-container">
+        <div class="marker-title">
+          VOCÊ
+        </div>
+        <div class="arrow-down-overlay">
+        </div>
+      </div>
+    </agm-overlay> -->
+    <agm-overlay *ngFor="let member of members" [latitude]="member.coordinates[1]" [longitude]="member.coordinates[0]">
+      <div *ngIf="member">
+        <div class="marker-container">
+          <div class="marker-title" style="background-color: royalblue;">
+            {{member.name}}
+          </div>
+          <div class="arrow-down-overlay-blue">
+          </div>
+        </div>
+      </div>
+    </agm-overlay>
+    <!-- <agm-marker [latitude]="myLatitude" [longitude]="myLongitude" animation="BOUNCE"
+      iconUrl="../../assets/markers/blue-person-marker.png">
+    </agm-marker> -->
+  </agm-map>
+</ion-content>

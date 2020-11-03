@@ -1,0 +1,17 @@
+<ion-content class="main-container background">
+    <div class="background">
+        <ion-icon name="home" class="logo" color="light"></ion-icon>
+        <ion-item style="width: 300px; min-height: 35px; margin-bottom: 15px; border-radius: 10px;">
+            <ion-label position="floating" >Email</ion-label>
+            <ion-input type="text" [(ngModel)]="email"></ion-input>
+        </ion-item>
+        <ion-item style="width: 300px; min-height: 35px; border-radius: 10px;">
+            <ion-label position="floating" >Senha</ion-label>
+            <form>
+                <ion-input type="password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}"></ion-input>
+            </form>
+        </ion-item>
+        <ion-button size="large" expand="block" color="light" class="button" (click)="doLogin()" style="font-weight: bold; ">ENTRAR</ion-button>
+        <ion-button size="large" expand="block" color="light" fill="outline" class="button" (click)="navigateToRegisterPage()" style="font-weight: bold;">REGISTRAR</ion-button>
+    </div>
+</ion-content>
